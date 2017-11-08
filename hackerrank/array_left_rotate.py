@@ -1,7 +1,4 @@
-
-
-# Problem from hackerrank
-# https://www.hackerrank.com/challenges/ctci-array-left-rotation
+# Problem https://www.hackerrank.com/challenges/ctci-array-left-rotation
 
 from __future__ import print_function
 
@@ -30,25 +27,23 @@ Input
 1 2 3 4 5
 """
 
+n, k = 5, 4
+a = [1, 2, 3, 4, 5]
+print(a, n, k)
 
-n, k = list(map(int, "5 4".strip().split(' ')))
-a = list(map(int, "1 2 3 4 5".strip().split(' ')))
 answer = array_left_rotation(a, n, k)
-print(' '.join(map(str, answer)))
+print(answer)
 
 n, k = 5, 1
-a = list(map(int, "1 2 3 4 5".strip().split(' ')))
+a = [1, 2, 3, 4, 5]
+print(a, n, k)
+
 answer = array_left_rotation(a, n, k)
-print(a)
-print(' '.join(map(str, answer)))
+print(answer)
 
+n, k = 5, 3
+a = [1, 2, 3, 4, 5]
+print(a, n, k)
 
-large_test = True
-if large_test:
-    with open('data/large_array.data', 'r') as data_file:
-        data = data_file.read().split('\n')
-    # print data
-    n, k = list(map(int, data[0].strip().split(' ')))
-    a = list(map(int, data[1].strip().split(' ')))
-    answer = array_left_rotation(a, n, k)
-    print(' '.join(map(str, answer)))
+answer = array_left_rotation(a, n, k)
+print(answer)

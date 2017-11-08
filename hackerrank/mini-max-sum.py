@@ -1,6 +1,6 @@
 #!/bin/python3
 
-# Question - https://www.hackerrank.com/challenges/mini-max-sum/problem
+# Problem https://www.hackerrank.com/challenges/mini-max-sum/problem
 
 import sys
 
