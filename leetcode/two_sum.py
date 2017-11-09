@@ -8,7 +8,7 @@ class Solution(object):
         """
         ans = list()
         for i in range(len(nums)):
-            for j in xrange(i + 1, len(nums)):
+            for j in range(i + 1, len(nums)):
                 val = nums[i] + nums[j]
                 if val == target:
                     ans.append(i)
@@ -30,6 +30,22 @@ class Solution(object):
         for i, num in enumerate(nums):
             if num in num_dict:
                 return [num_dict[num], i]
+            else:
+                num_dict[target - num] = i
+        return []
+
+    def twoSum_(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        num_dict = dict()
+        # print(nums, target)
+        for i, num in enumerate(nums):
+            val = num_dict.get(num)
+            if val is not None:
+                return [val, i]
             else:
                 num_dict[target - num] = i
         return []
