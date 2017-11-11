@@ -25,3 +25,5 @@ print(binary_search(l, 5, 0, len(l)))
 print(binary_search(l, 3, 0, len(l)))
 
 print(binary_search(l, 1, 0, len(l)))
+
+print(binary_search(l, 10, 0, len(l)))
