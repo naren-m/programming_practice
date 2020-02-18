@@ -27,7 +27,7 @@ def fib_dp(n):
 def fibonacci_formula(n):
     if n < 2: return n
     sq_5 = sqrt(5)
-    phi = (1 + sq_5) / 2
+    phi = (1 + sq_5) / 2 # phi = 1.618034
     n = int(((phi ** n) - (1 - phi) ** n) / sq_5 )
     # n = int(((1+sqrt(5))**n-(1-sqrt(5))**n)/(2**n*sqrt(5)))
 
