@@ -16,14 +16,17 @@ class Solution(object):
         
         prev = s[0]
         num = romanNumerals[prev]
+        i = 1
+        while i < len(s) - 1:
+            
         for n in s[1:]:
             if romanNumerals[prev] < romanNumerals[n]:
                 num = romanNumerals[n] - num
             else:
                 num += romanNumerals[n]
-        
+            prev = n
+
         return num
-        
 
 
 s = Solution()
@@ -40,5 +43,3 @@ for test in tests:
     rev = s.romanToInt(test['input'])
     print('Input {}. Expected {}, got {}'.format(test['input'], test['expected'], rev))
     # assert rev == test['expected']
-
-
