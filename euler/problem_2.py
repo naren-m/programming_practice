@@ -17,7 +17,7 @@ def fibonacci(n, cache):
     k = fibonacci(n-1, cache) + fibonacci(n-2, cache)
     cache[n] = k
     return k
-   
+
 def fibonacci_formula(n):
     if n < 2: return n
     phi = (1 + sqrt(5)) / 2

@@ -1,5 +1,9 @@
 # https://leetcode.com/problems/valid-parentheses/
 
+# Given a string s containing just the characters
+#   '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+
 class Solution(object):
     def isValid(self, s):
         """
@@ -20,8 +24,8 @@ class Solution(object):
                 if len(stack) == 0 or c != stack.pop():
                     return False
 
-        return len(stack) == 0 
-        
+        return len(stack) == 0
+
 
 
 
@@ -44,6 +48,6 @@ for test in tests:
     start = time()
     result = s.isValid(test['input'])
     end = time()
-    
+
     print('Expected {}, got {}. Time took {} ms'.format(test['expected'], result, datetime.timedelta(end-start).microseconds))
     assert result == test['expected']

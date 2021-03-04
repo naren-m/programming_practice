@@ -1,5 +1,7 @@
 # https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/528/week-1/3283/
 
+# Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+# Follow up: Could you implement a solution with a linear runtime complexity and without using extra memory?
 
 class Solution(object):
     def singleNumber(self, nums):
@@ -10,7 +12,7 @@ class Solution(object):
         u = 0
         for n in nums:
             u = u ^ n
-            
+
         return u
 
 s = Solution()

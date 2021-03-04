@@ -13,7 +13,7 @@ def prime_factors(n):
 
     factor = 3
     max_factor = sqrt(n)
-    
+
     while n > 1 and factor <= max_factor:
         if n % factor == 0:
             pf.add(factor)
@@ -24,7 +24,7 @@ def prime_factors(n):
 
     if n != 1:
         pf.add(n)
-    
+
     return pf
 
 pfs = prime_factors(600851475143)
