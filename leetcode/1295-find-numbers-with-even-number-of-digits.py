@@ -2,9 +2,6 @@
 # https://leetcode.com/explore/learn/card/fun-with-arrays/521/introduction/3237/
 
 
-from unicodedata import digit
-
-
 class Solution:
     # Find numbers with even number of digits
     def findNumbers(self, nums):
