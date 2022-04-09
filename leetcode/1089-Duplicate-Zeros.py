@@ -21,10 +21,14 @@ class Solution:
             
             i += 1
                 
+
     def rightShift(self, arr, index):
-        if len(arr) - 1 == index: return
-        for i in range(len(arr)-2, index, -1):
+        i = len(arr) - 2
+        while i >=index:
             arr[i+1] = arr[i]
+            i -= 1
+                
+        
                 
                 
 
