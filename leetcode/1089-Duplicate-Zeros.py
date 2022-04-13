@@ -24,7 +24,7 @@ class Solution:
 
     def rightShift(self, arr, index):
         i = len(arr) - 2
-        while i >=index:
+        while i >= index:
             arr[i+1] = arr[i]
             i -= 1
                 
