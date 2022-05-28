@@ -16,7 +16,7 @@
 # return [0, 1].
 #
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def twoSum(self, nums, target):
         d = dict()
 
         for i, n in enumerate(nums):
