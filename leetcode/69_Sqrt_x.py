@@ -32,17 +32,3 @@ for test in tests:
     n = s.mySqrt(test['input'])
     print('Expected {}, got {}'.format(test['expected'], n))
     assert n == test['expected']
-    
-class Solution:
-    def guessNumber(self, n: int) -> int:
-        l, r = 0, n
-        while l < r:
-            g = l + r // 2
-            if guess(g) == 0: # g == pick
-                return g
-            elif guess(g) == -1: # pick < g, search in the left side
-                r = g
-            elif guess(g) == 1: # pick > g, search in the right side
-                l = g
-                
-        return r
