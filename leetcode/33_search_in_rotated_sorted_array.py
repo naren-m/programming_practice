@@ -22,7 +22,26 @@ class Solution:
                 if nums[m] == target:
                     return m
                 
-                if nums[m] < nums[l]:
+                if nums[m] < target:
+                    l = m + 1
+                elif nums[m] > target:
+                    r = m - 1
+            
+            return -1
+        
+        n = len(nums) - 1
+        if n == 0: 
+            return 0 if nums[0] == target else -1
+
+        ri = find_rotate_index(0, n)
+        
+        if ri == 0: # Array not rotated
+            return search(0, n)
+        
+        if nums[ri] == target: return ri
+        
+        if target < nums[ri]: return search(0, ri) # Search left
+        if target > nums[ri]: return search(ri, n) # search right
                     
 
 
