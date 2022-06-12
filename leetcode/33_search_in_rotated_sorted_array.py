@@ -7,7 +7,7 @@ class Solution:
             if nums[l] < nums[r]:
                 return 0
             
-            while l < r:
+            while l <= r:
                 m = (l+r)//2
                 if nums[m] > nums[m+1]:
                     return m + 1
@@ -22,9 +22,9 @@ class Solution:
                 if nums[m] == target:
                     return m
                 
-                if nums[m] < target:
+                if target > nums[m]:
                     l = m + 1
-                elif nums[m] > target:
+                elif target < nums[m]:
                     r = m - 1
             
             return -1
@@ -35,13 +35,12 @@ class Solution:
 
         ri = find_rotate_index(0, n)
         
+        if nums[ri] == target: return ri # RI is the target
         if ri == 0: # Array not rotated
             return search(0, n)
         
-        if nums[ri] == target: return ri
-        
-        if target < nums[ri]: return search(0, ri) # Search left
-        if target > nums[ri]: return search(ri, n) # search right
+        if target < nums[0]: return search(ri, n) # Search right
+        return search(0, ri) # search left
                     
 
 
@@ -53,6 +52,8 @@ tests = [
     {'input': ([4,5,6,7,0,1,2], 0), 'expected': 4},
     {'input': ([4,5,6,7,0,1,2], 3), 'expected': -1 },
     {'input': ([0], 1), 'expected': -1 },
+    {'input': ([3, 1], 3), 'expected': 0 },
+    {'input': ([5,1,3], 0), 'expected': -1 },
 ]
 
 for test in tests:
