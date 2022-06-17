@@ -11,10 +11,10 @@ class Solution:
                 m = (l+r)//2
                 if nums[m] > nums[m+1]:
                     return m + 1
-                if nums[l] < nums[m]:
-                    l = m + 1
-                else:
+                if nums[m] < nums[l]:
                     r = m - 1
+                else:
+                    l = m + 1
         
         def search(l, r):
             while l <= r:
@@ -54,6 +54,8 @@ tests = [
     {'input': ([0], 1), 'expected': -1 },
     {'input': ([3, 1], 3), 'expected': 0 },
     {'input': ([5,1,3], 0), 'expected': -1 },
+    {'input': ([4,5,1,2,3], 1), 'expected': 2 },
+
 ]
 
 for test in tests:
