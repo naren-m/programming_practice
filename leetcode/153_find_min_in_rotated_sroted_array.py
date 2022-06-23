@@ -13,7 +13,7 @@ class Solution:
                 if nums[m] > nums[m+1]:
                     return m+1
                 
-                if nums[m] < nums[l]: # search right
+                if nums[m] < nums[l]: # search left
                     r = m - 1
                 else:
                     l = m + 1
